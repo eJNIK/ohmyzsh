@@ -73,7 +73,11 @@ ZSH_THEME="robbyrussell"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 
-
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
 plugins=(
 ansible
 aws
@@ -82,11 +86,11 @@ git
 docker
 pyenv
 terraform
-#zsh-syntax-highlighting
+zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
-#source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH="/Users/ejnik/.local/bin:$PATH"
 # User configuration
@@ -117,6 +121,4 @@ export PATH="/Users/ejnik/.local/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
-
-export PATH="$HOME/.poetry/bin:$PATH"
+source ~/.oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
